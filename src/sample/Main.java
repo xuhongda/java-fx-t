@@ -11,6 +11,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
+    public void init(){
+        System.out.println("init");
+    }
+
+    @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
@@ -32,6 +37,11 @@ public class Main extends Application {
 
         // 显示窗口
         primaryStage.show();
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("stop");
     }
 
 
